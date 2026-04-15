@@ -3,7 +3,7 @@
 FX初心者が遠回りしないための「お守りツール」を無料配布する静的サイトです。
 GitHub Pages でホストし、zip配布は GitHub Releases を利用します。
 
-**配布ページ(本番):** `https://masato-collab.github.io/rainbow-fxkit/`
+**配布ページ(本番):** `https://Rainbow-Project-prog.github.io/rainbow-fxkit/`
 
 ---
 
@@ -75,7 +75,7 @@ python3 -m http.server 8000
 リンク形式:
 
 ```
-https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/{filename}.zip
+https://github.com/Rainbow-Project-prog/rainbow-fxkit/releases/latest/download/{filename}.zip
 ```
 
 `/latest/` を使っているため、新バージョンをリリースしてもサイト側のリンク修正は不要です。
@@ -105,21 +105,21 @@ https://github.com/masato-collab/rainbow-fxkit/releases/latest/download/{filenam
 1. リポジトリの `Settings` → `Pages`
 2. `Source` で `Deploy from a branch` を選択
 3. `Branch` を `main` / `(root)` に設定して `Save`
-4. 数分後に `https://masato-collab.github.io/rainbow-fxkit/` で公開される
+4. 数分後に `https://Rainbow-Project-prog.github.io/rainbow-fxkit/` で公開される
 
 ---
 
 ## 🔧 GitHub ID の一括置換
 
-公開前に、サイト内プレースホルダー `masato-collab` を実アカウント名に置換してください。
+公開前に、サイト内プレースホルダー `Rainbow-Project-prog` を実アカウント名に置換してください。
 
 ```bash
 # macOS / Linux
-grep -rl 'masato-collab' . | xargs sed -i '' 's/masato-collab/your-actual-id/g'
+grep -rl 'Rainbow-Project-prog' . | xargs sed -i '' 's/Rainbow-Project-prog/your-actual-id/g'
 
 # Windows (PowerShell)
 Get-ChildItem -Recurse -File | ForEach-Object {
-  (Get-Content $_.FullName) -replace 'masato-collab','your-actual-id' | Set-Content $_.FullName
+  (Get-Content $_.FullName) -replace 'Rainbow-Project-prog','your-actual-id' | Set-Content $_.FullName
 }
 ```
 
