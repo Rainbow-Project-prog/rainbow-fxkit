@@ -534,19 +534,26 @@ code, kbd, pre, samp { font-family: var(--font-mono); font-size: 0.9em; }
   margin-bottom: var(--space-5);
   display: flex;
   flex-direction: column;
+  align-items: center;   /* タイトル全体を中央揃え */
   gap: 0.25em;
+  text-align: center;
 }
 .hero__title-main {
   font-size: clamp(2rem, 5.5vw, 3rem);
   color: var(--text-primary);
   display: block;
+  text-align: center;
 }
 .hero__title-sub {
-  font-size: clamp(2.4rem, 8vw, 4.75rem);
+  font-size: clamp(2rem, 7.5vw, 4.25rem);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   display: block;
+  text-align: center;
   text-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  word-break: keep-all;
+  overflow-wrap: normal;
+  max-width: 100%;
 }
 .hero__title-sub .gradient-text {
   background: var(--rainbow-gradient);
@@ -593,10 +600,9 @@ code, kbd, pre, samp { font-family: var(--font-mono); font-size: 0.9em; }
   bottom: var(--space-5);
   transform: translateX(-50%);
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 0.75rem 1.5rem;
+  justify-content: center;
+  padding: 0.95rem 2rem;
   border-radius: var(--radius-full);
   background: var(--bg-card);
   box-shadow: var(--shadow-md);
@@ -610,19 +616,14 @@ code, kbd, pre, samp { font-family: var(--font-mono); font-size: 0.9em; }
   box-shadow: var(--shadow-lg);
 }
 .hero__scroll-text {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 800;
   letter-spacing: 0.05em;
+  text-align: center;
   background: var(--rainbow-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-.hero__scroll-arrow {
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 1;
-  color: var(--text-primary);
 }
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -1540,10 +1541,11 @@ code, kbd, pre, samp { font-family: var(--font-mono); font-size: 0.9em; }
   /* タイトル: 折り返し事故防止(mid-word break を抑制し、サイズも控えめに) */
   .hero__title-main { font-size: clamp(1.5rem, 7vw, 2.25rem); }
   .hero__title-sub {
-    font-size: clamp(2rem, 11vw, 3.25rem);
+    font-size: clamp(1.75rem, 9vw, 2.75rem);
     word-break: keep-all;
     overflow-wrap: normal;
     line-break: strict;
+    letter-spacing: -0.03em;
   }
 
   /* サブタイトル: 改行を自動化 */
@@ -1584,9 +1586,8 @@ code, kbd, pre, samp { font-family: var(--font-mono); font-size: 0.9em; }
   .stats { grid-template-columns: 1fr; }
   .bulk { padding: var(--space-8) var(--space-4); }
   .tool-card__body { padding: var(--space-5); }
-  .hero__scroll { padding: 0.55rem 1rem; }
-  .hero__scroll-text { font-size: 0.8125rem; }
-  .hero__scroll-arrow { font-size: 1.125rem; }
+  .hero__scroll { padding: 0.85rem 1.5rem; }
+  .hero__scroll-text { font-size: 1rem; }
 }
 
 /* -----------------------------------------------------------------
